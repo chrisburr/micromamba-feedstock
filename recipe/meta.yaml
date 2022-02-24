@@ -1,13 +1,13 @@
-{% set version = "0.21.2" %}
-{% set build_num = 1 %}
+{% set version = "0.21.3a0" %}
+{% set build_num = 0 %}
 
 package:
   name: micromamba
   version: {{ version }}
 
 source:
-  - url: https://github.com/mamba-org/mamba/archive/refs/tags/micromamba-{{ version }}.tar.gz
-    sha256: 9fd16d01eeb754f797144559f3e1f8e02348dae331555f5b97e51f7b4e83f339
+  - git_url: https://github.com/chrisburr/mamba.git
+    git_rev: passthrough-qemu-prefix
     patches:
       - libmamba.patch
 
